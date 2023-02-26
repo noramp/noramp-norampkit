@@ -18,6 +18,13 @@ For full documentation, visit [noramp.io](https://noramp.io).
 
 # Quick start
 
+```bash
+npm installl @noramp/norampkit
+
+yarn add @noramp/norampkit
+
+```
+
 ```javascript
 import { NoRampPayButton } from '@noramp/norampkit';
 
