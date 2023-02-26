@@ -14,7 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint src example",
+    "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
@@ -25,6 +25,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
   },
   "prettier": {
@@ -50,8 +56,12 @@
     "@size-limit/preset-small-lib": "^8.2.4",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "eslint": "^8.35.0",
+    "eslint-config-react-app": "^7.0.1",
     "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
