@@ -25,9 +25,9 @@ yarn add @noramp/norampkit
 ```
 
 ```javascript
-import { NoRampPayButton } from '@noramp/norampkit';
+import { NoRampOneClick } from '@noramp/norampkit';
 
-<NoRampPayButton
+<NoRampOneClick
   apiKey="API_KEY"
   appId="APP_ID"
   triggerId="TRIGGER_ID"

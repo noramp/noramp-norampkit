@@ -5,7 +5,7 @@ interface NoRampPrice {
   id: string;
 }
 
-interface NoRampPayButtonProps {
+interface NoRampProps {
   apiKey: string;
   appId: string;
   triggerId: string;
@@ -15,7 +15,7 @@ interface NoRampPayButtonProps {
   production: boolean;
 }
 
-export const NoRampPayButton = ({
+export const NoRampOneClick = ({
   apiKey,
   appId,
   triggerId,
@@ -23,7 +23,7 @@ export const NoRampPayButton = ({
   priceInFiat,
   currency,
   production,
-}: NoRampPayButtonProps) => {
+}: NoRampProps) => {
   const [price, setPrice] = React.useState<NoRampPrice | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(false);
