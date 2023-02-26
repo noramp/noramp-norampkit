@@ -7,11 +7,11 @@ const App = () => {
   return (
     <div>
       <NoRampOneClick
-        apiKey={process.env.API_KEY as string}
-        appId={process.env.APP_ID as string}
-        triggerId={process.env.TRIGGER_ID as string}
+        apiKey="API_KEY"
+        appId="APP_ID"
+        triggerId="TRIGGER_ID"
         currency="usd"
-        triggerParams={['0x2184d6a4Fbd26584eb4FF90a215C1DB334209053']}
+        triggerParams={['MINTER_ADDRESS']}
         priceInFiat={5}
         production={true}
       />
