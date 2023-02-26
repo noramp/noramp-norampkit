@@ -4,7 +4,7 @@
 
 # NoRampKit
 
-**The best way to connect a wallet 🛹**
+**The best way to accept credit card payments for your NFTs 🛹**
 
 NoRampKit is a [React](https://reactjs.org/) library that makes it easy to add a 1-click NFT checkout to your dapp.
 
