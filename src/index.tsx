@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './NoRampStyle.css';
 
-interface NoRampPrice {
+export interface NoRampPrice {
   id: string;
 }
 
-interface NoRampProps {
+export interface NoRampProps {
   apiKey: string;
   appId: string;
   triggerId: string;
