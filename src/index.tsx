@@ -13,6 +13,7 @@ export interface NoRampProps {
   priceInFiat: number;
   currency: 'usd';
   testnet: boolean;
+  theme: 'dark' | 'light';
 }
 
 export const NoRampOneClick = ({
@@ -23,6 +24,7 @@ export const NoRampOneClick = ({
   priceInFiat,
   currency,
   testnet,
+  theme,
 }: NoRampProps) => {
   const [price, setPrice] = React.useState<NoRampPrice | null>(null);
   const [error, setError] = React.useState<string | null>(null);
@@ -67,7 +69,7 @@ export const NoRampOneClick = ({
   if (price) {
     <div>
       <iframe
-        src={`${embedUrl}/embed/payments/${appId}?device=desktop&theme=dark&price_id=${price.id}`}
+        src={`${embedUrl}/embed/payments/${appId}?device=desktop&theme=${theme}&price_id=${price.id}`}
         height="180"
         width="450"
       />

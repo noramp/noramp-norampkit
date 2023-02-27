@@ -10,6 +10,7 @@ const App = () => {
       triggerId="TRIGGER_ID"
       currency="usd"
       triggerParams={['MINTER_ADDRESS']}
+      theme="dark"
       priceInFiat={5}
       testnet
     />

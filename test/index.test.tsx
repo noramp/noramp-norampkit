@@ -11,6 +11,7 @@ describe('it', () => {
         appId=""
         triggerId=""
         currency="usd"
+        theme="dark"
         triggerParams={['']}
         priceInFiat={5}
         testnet
