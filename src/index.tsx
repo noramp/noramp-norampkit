@@ -1,18 +1,18 @@
 import * as React from 'react';
 import './NoRampStyle.css';
 
-interface NoRampPrice {
+export interface NoRampPrice {
   id: string;
 }
 
-interface NoRampProps {
+export interface NoRampProps {
   apiKey: string;
   appId: string;
   triggerId: string;
   triggerParams: [string];
   priceInFiat: number;
   currency: 'usd';
-  production: boolean;
+  testnet: boolean;
 }
 
 export const NoRampOneClick = ({
@@ -22,19 +22,19 @@ export const NoRampOneClick = ({
   triggerParams,
   priceInFiat,
   currency,
-  production,
+  testnet,
 }: NoRampProps) => {
   const [price, setPrice] = React.useState<NoRampPrice | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(false);
 
-  const apiEndpoint = production
-    ? 'https://api.noramp.io'
-    : 'https://testnet.noramp.io';
+  const apiEndpoint = testnet
+    ? 'https://testnet.noramp.io'
+    : 'https://api.noramp.io';
 
-  const embedUrl = production
-    ? 'https://on-noramp.com'
-    : 'https://testnet.on-noramp.com';
+  const embedUrl = testnet
+    ? 'https://testnet.on-noramp.com'
+    : 'https://on-noramp.com';
 
   const createPrice = async () => {
     setLoading(true);

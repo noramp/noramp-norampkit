@@ -13,7 +13,7 @@ describe('it', () => {
         currency="usd"
         triggerParams={['']}
         priceInFiat={5}
-        production={false}
+        testnet
       />,
       div
     );
