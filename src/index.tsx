@@ -12,8 +12,8 @@ export interface NoRampProps {
   triggerParams: [string];
   priceInFiat: number;
   currency: 'usd';
-  testnet: boolean;
-  theme: 'dark' | 'light';
+  testnet?: boolean;
+  theme?: 'dark' | 'light';
 }
 
 export const NoRampOneClick = ({
@@ -23,8 +23,8 @@ export const NoRampOneClick = ({
   triggerParams,
   priceInFiat,
   currency,
-  testnet,
-  theme,
+  testnet = false,
+  theme = 'dark',
 }: NoRampProps) => {
   const [price, setPrice] = React.useState<NoRampPrice | null>(null);
   const [error, setError] = React.useState<string | null>(null);

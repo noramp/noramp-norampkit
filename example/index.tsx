@@ -1,3 +1,4 @@
+import React from 'react';
 import 'react-app-polyfill/ie11';
 import * as ReactDOM from 'react-dom';
 import { NoRampOneClick } from '../.';
@@ -5,14 +6,13 @@ import { NoRampOneClick } from '../.';
 const App = () => {
   return (
     <NoRampOneClick
-      apiKey="API_KEY"
-      appId="APP_ID"
-      triggerId="TRIGGER_ID"
+      apiKey={import.meta.env.VITE_API_KEY || 'APP_ID'}
+      appId={import.meta.env.VITE_APP_ID || 'APP_ID'}
+      triggerId={import.meta.env.VITE_TRIGGER_ID || 'APP_ID'}
       currency="usd"
-      triggerParams={['MINTER_ADDRESS']}
+      triggerParams={[import.meta.env.VITE_MINTER_ADDRESS || 'APP_ID']}
       theme="dark"
       priceInFiat={5}
-      testnet
     />
   );
 };
